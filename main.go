@@ -18,7 +18,7 @@ func main() {
 		),
 		fx.Invoke(
 			func(db *sqlx.DB) {
-				_, error := db.Query("SELECT * FROM users")
+				_, error := db.Query("select * from USERS")
 				if error != nil {
 					panic(error)
 				}

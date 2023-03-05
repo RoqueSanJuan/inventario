@@ -37,4 +37,7 @@ Se Recomienda que el archivo tenga el mismo nombre del paquete
 Base de datos en mariaDB
 Docker para generar la base 
 
-docker run -d --name mariadb --env MARIADB_ROOT_PASSWORD=rootroot  mariadb:10.7.4
+docker run -d --name -p 3306:3306 mariadb --env MARIADB_ROOT_PASSWORD=rootroot  mariadb:10.7.4
+
+Si no deja logearse a la base se puede usar el siguiente comando conectandose con el usuario root sin pass
+    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'rootroot';
